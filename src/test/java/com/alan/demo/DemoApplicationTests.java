@@ -71,6 +71,7 @@ public class DemoApplicationTests {
         userPage.setCurrent(2);
         userPage.setSize(1);
         Page<User> userList = userService.selectPage(userPage,new EntityWrapper<User>().gt("id",1));
+        System.out.println(userList);
         System.out.println(userList.getRecords());
     }
 }
